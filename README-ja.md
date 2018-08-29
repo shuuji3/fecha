@@ -1,6 +1,6 @@
 # fecha [![Build Status](https://travis-ci.org/taylorhakes/fecha.png?branch=master)](https://travis-ci.org/taylorhakes/fecha)
 
-Lightweight date formatting and parsing (~2KB). Meant to replace parsing and formatting functionality of moment.js.
+軽量な日時のフォーマットとパース用ライブラリ (~2KB)。moment.js のフォーマットとパースの機能を置き換えることが可能。
 
 ### NPM
 ```
@@ -16,36 +16,36 @@ npm install fecha --save
       <th>Moment</th>
     </tr>
     <tr>
-      <td><b>Size (Min. and Gzipped)</b></td>
+      <td><b>サイズ (ミニマイズ化・gzip 後)</b></td>
       <td>2.1KBs</td>
       <td>13.1KBs</td>
     </tr>
     <tr>
-      <td><b>Date Parsing</b></td>
+      <td><b>日時のパース</b></td>
       <td>&#x2713;</td>
       <td>&#x2713;</td>
     </tr>
     <tr>
-      <td><b>Date Formatting</b></td>
+      <td><b>日時のフォーマット</b></td>
       <td>&#x2713;</td>
       <td>&#x2713;</td>
     </tr>
     <tr>
-      <td><b>Date Manipulation</b></td>
+      <td><b>日付の操作</b></td>
       <td></td>
       <td>&#x2713;</td>
     </tr>
     <tr>
-      <td><b>I18n Support</b></td>
+      <td><b>国際化 (I18n) の対応</b></td>
       <td>&#x2713;</td>
       <td>&#x2713;</td>
     </tr>
   </tbody>
 </table>
 
-## Use it
+## 使用例
 
-#### Formatting
+#### フォーマット
 `fecha.format` accepts a Date object (or timestamp) and a string format and returns a formatted string. See below for
 available format tokens.
 
@@ -65,7 +65,7 @@ fecha.format(new Date(2015, 2, 10, 5, 30, 20), 'shortTime'); // '05:30'
 fecha.format(new Date(2001, 2, 5, 6, 7, 2, 5), '[on] MM-DD-YYYY [at] HH:mm'); // 'on 03-05-2001 at 06:07'
 ```
 
-#### Parsing
+#### パース
 `fecha.parse` accepts a Date string and a string format and returns a Date object. See below for available format tokens.
 
 Note: `fecha.parse` will throw an error when passed invalid parameters
@@ -79,7 +79,7 @@ fecha.parse('5/3/98', 'shortDate'); // new Date(1998, 4, 3)
 fecha.parse('November 4, 2005', 'longDate'); // new Date(2005, 10, 4)
 ```
 
-#### i18n Support
+#### 国際化 (i18n) の対応
 ```js
 // Override fecha.i18n to support any language
 fecha.i18n = {
@@ -95,7 +95,7 @@ fecha.i18n = {
 }
 ```
 
-#### Custom Named Masks
+#### カスタムの名前付きマスク
 ```js
 fecha.masks = {
 	'default': 'ddd MMM DD YYYY HH:mm:ss',
@@ -119,7 +119,7 @@ fecha.format(new Date(2014, 5, 6, 14, 10, 45), 'myMask'); // '14:10:45 14/06/06'
 <table class="table table-striped table-bordered">
   <tbody>
     <tr>
-      <th></th>
+      <th>日時の種別</th>
       <th>トークン</th>
       <th>表示</th>
     </tr>
